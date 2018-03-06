@@ -5,6 +5,7 @@
 #include <cassert>
 #include <climits>
 #include <cstdlib>
+#include <cstring> // std::memcpy
 #include <iostream>
 #include <stdexcept>
 #include <vector>

@@ -2,10 +2,17 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include <string>
+//#include <string>
+#include <cstring> // for std::strlen
 
 #include "gluvi.h"
-#include "gl/glu.h"
+
+
+#if defined(WIN32) || defined(_WIN32) || defined(WIN64) || defined(_WIN64)
+#include <gl/glu.h>
+#else
+#include <GL/glu.h>
+#endif
 
 //Simple viewer for liquid simulator data
 //Hold shift and use the mouse buttons to manipulate the camera
